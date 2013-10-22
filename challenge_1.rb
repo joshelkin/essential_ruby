@@ -17,6 +17,17 @@
 # Your code to define the method goes here.
 # =========================================
 
-puts "made some changes!"
+def pmt monthly_rate, months, principal
+  p = principal
+  r = monthly_rate
+  n = months
+
+  numerator = (p*r)*((1+r)**n)
+  denominator = ((1+r)**n)-1
+
+  return numerator/denominator
+
+end
 
 puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
+# puts "Your monthly payment will be #{pmt(0.065/12, 360, 200000)}."
